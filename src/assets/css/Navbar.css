@@ -1,0 +1,53 @@
+/* Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  background: #000428;
+  background: -webkit-linear-gradient(to top, #004e92, #000428);
+  background: linear-gradient(to top, #004e92, #000428);
+  position: fixed; /* Fija el navbar */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100; /* Asegura que el navbar esté en la parte superior */
+  /* Añade otros estilos según tus preferencias */
+
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 28px;
+  font-style: italic;
+}
+
+.navbar .opciones {
+  display: flex;
+  gap: 20px; /* Espacio entre los elementos */
+  align-items: center;
+}
+
+.navbar .opciones span {
+  cursor: pointer;
+}
+
+.navbar .tienda-btn {
+  background: #AACB73;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.navbar .register-btn {
+  background: #AACB73;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.navbar .login-btn {
+  background: #4477CE;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
