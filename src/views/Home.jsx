@@ -19,7 +19,7 @@ export default function Home() {
           <img
             className="d-block w-100 mx-auto"
             style={{ maxWidth: '350px', maxHeight: '450px' }}
-            src="/img/pollo.png" // Reemplaza con la ruta de tu primera imagen
+            src="/img/pollo.png" // la ruta de tu primera imagen
             alt="Primera Imagen"
           />
         </Carousel.Item>
@@ -27,7 +27,7 @@ export default function Home() {
           <img
             className="d-block w-100 mx-auto"
             style={{ maxWidth: '400px', maxHeight: '450px' }}
-            src="/img/gatito.png" // Reemplaza con la ruta de tu segunda imagen
+            src="/img/gatito.png"
             alt="Segunda Imagen"
           />
         </Carousel.Item>
@@ -35,7 +35,7 @@ export default function Home() {
           <img
             className="d-block w-100 mx-auto"
             style={{ maxWidth: '400px', maxHeight: '450px' }}
-            src="/img/champi.png" // Reemplaza con la ruta de tu segunda imagen
+            src="/img/champi.png" 
             alt="Tercera Imagen"
           />
         </Carousel.Item>
@@ -43,7 +43,7 @@ export default function Home() {
           <img
             className="d-block w-100 mx-auto"
             style={{ maxWidth: '400px', maxHeight: '450px' }}
-            src="/img/pollogatitos.png" // Reemplaza con la ruta de tu segunda imagen
+            src="/img/pollogatitos.png" 
             alt="Cuarta Imagen"
           />
         </Carousel.Item>
@@ -51,7 +51,7 @@ export default function Home() {
           <img
             className="d-block w-100 mx-auto"
             style={{ maxWidth: '400px', maxHeight: '450px' }}
-            src="/img/duck.webp" // Reemplaza con la ruta de tu segunda imagen
+            src="/img/duck.webp" 
             alt="Quinta Imagen"
           />
         </Carousel.Item>

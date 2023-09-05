@@ -53,7 +53,8 @@ export default function Tienda() {
           {Array.from({ length: totalPages }).map((_, index) => (
             <Pagination.Item
               key={index + 1}
-              active={index + 1 === currentPage}
+              className={`pagination-number ${index + 1 === currentPage ? "active" : ""
+                }`}
               onClick={() => paginate(index + 1)}
             >
               {index + 1}
