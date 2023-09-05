@@ -1,7 +1,7 @@
 import "../assets/css/Tienda.css";
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Card, Button, Pagination } from "react-bootstrap";
-// para ver oltimos cambios
+
 export default function Tienda() {
   const [productos, setProductos] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
