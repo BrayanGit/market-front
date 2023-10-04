@@ -1,8 +1,9 @@
 import { useContext, useState, useEffect } from "react";
 import Context from "../Context";
 import axios from "axios";
+import Galeria from "../components/Galeria";
 
-export default function Home() {
+export default function PerfilUsuario() {
   const { setUsuario: setUsuarioGlobal } = useContext(Context);
   const [usuario, setUsuarioLocal] = useState({});
 
@@ -10,7 +11,7 @@ export default function Home() {
     const urlServer = "http://localhost:3000";
     const endpoint = "/usuarios";
     const token = localStorage.getItem("token");
-
+    
     try {
       const { data } = await axios.get(urlServer + endpoint, {
         headers: { Authorization: "Bearer " + token },
@@ -29,11 +30,13 @@ export default function Home() {
   return (
     <div className="py-5">
       <h1>
-        Bienvenido <span className="fw-bold">{usuario.email}</span>
+        <br />
+        Bienvenido <span className="fw-bold">{usuario.nombre}</span>
       </h1>
       <h3>
-        {usuario.rol} en {usuario.lenguage}
+        Estas en tu perfil comenta sobre nuestros productos 😀
       </h3>
+      <Galeria />
     </div>
   );
 };

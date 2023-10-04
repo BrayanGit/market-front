@@ -7,8 +7,7 @@ export const products = [
     categoria: "Arena sanitaria",
     descripcion: "Exelente arena maximo rendimiento aroma limon",
     neto: "15 litros",
-    precio: "20000 CLP",
-    stock: 5
+    precio: "20000 CLP"
   },
   {
     id: 2,
@@ -17,8 +16,7 @@ export const products = [
     categoria: "Arena sanitaria",
     descripcion: "Maximo aglutinamiento aroma lavanda",
     neto: "18 litros",
-    precio: "25000 CLP",
-    stock: 4 
+    precio: "25000 CLP"
   },
   {
     id: 3,
@@ -27,8 +25,7 @@ export const products = [
     categoria: "Arena sanitaria",
     descripcion: "Ecoamigable buen rendimiento exelente calidad",
     neto: "2 Kg",
-    precio: "3500",
-    stock: 6 
+    precio: "3500 CLP"
   },
   {
     id: 4,
@@ -37,8 +34,7 @@ export const products = [
     categoria: "Arena sanitaria",
     descripcion: "Aroma natural a base de minerales repelente de pulgas",
     neto: "2 Kg",
-    precio: "3000",
-    stock: 7 
+    precio: "3000 CLP"
   },
   // Alimentos
   {
@@ -48,8 +44,7 @@ export const products = [
     categoria: "Alimento",
     descripcion: "Gane su corazon con los mejores sabores",
     neto: "10 Kg",
-    precio: "60000",
-    stock: 10 
+    precio: "60000 CLP"
   },
   {
     id: 6,
@@ -58,8 +53,7 @@ export const products = [
     categoria: "Alimento",
     descripcion: "Alimento adulto protege su sistema",
     neto: "3 Kg",
-    precio: "5500",
-    stock: 7 
+    precio: "5500 CLP" 
   },
   {
     id: 7,
@@ -68,8 +62,7 @@ export const products = [
     categoria: "Alimento",
     descripcion: "Ultra nutritivo sabor carne etapa adulto",
     neto: "15 Kg",
-    precio: "19500",
-    stock: 15 
+    precio: "19500 CLP" 
   },
   {
     id: 8,
@@ -78,18 +71,16 @@ export const products = [
     categoria: "Alimento",
     descripcion: "Premium maxima nutricion a base de carne de pato",
     neto: "7.5 Kg",
-    precio: "50000",
-    stock: 10 
+    precio: "50000 CLP" 
   },
   {
     id: 9,
     nombre: "Felines",
     imagen: "pollo.png",
     categoria: "Alimento",
-    descripcion: "Sabor a pollo para la etapa adulta",
+    descripcion: "Sabor a pollo para la etapa adulto",
     neto: "8 Kg",
-    precio: "12000",
-    stock: 5 
+    precio: "12000 CLP"
   },
   {
     id: 10,
@@ -98,8 +89,7 @@ export const products = [
     categoria: "Alimento",
     descripcion: "Ideal para la etapa de lactancia y gestacion",
     neto: "20 Kg",
-    precio: "30000",
-    stock: 5 
-  },
+    precio: "30000 CLP"
+  }
   // Aquí pueden agregar más o modificar los productos existentes
 ];

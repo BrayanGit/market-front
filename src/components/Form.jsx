@@ -8,7 +8,7 @@ export default function Form() {
       await axios.post("http://localhost:3000/usuarios", { usuario })
       alert("Usuario agregado con éxito")
     } catch (error) {
-      alert("Algo salió mal")
+      alert("Algo salió al registrarse")
       console.log(error)
     }
   };

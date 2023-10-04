@@ -17,12 +17,13 @@ export default function Home() {
       <br />
       <h1 className="text-center">
         <br />
-        Bienvenido a <span className="fw-bold">ilTichoStore</span>
+        Bienvenido a <span className="fw-bold">MarketStore</span>
       </h1>
       <h4 className="text-center">
-        El lugar donde encontrarás excelentes productos en alimentos y arenas sanitarias para tu mascota 🐱🎉
+        Encontrarás productos en alimentos y arenas sanitarias para tu mascota 🐱🎉
       </h4>
       <h1 className="text-center mt-4">Nuestros Productos</h1>
+      <br />
       <Carousel style={carouselStyle}>
         <Carousel.Item>
           <img

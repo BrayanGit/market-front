@@ -5,3 +5,32 @@
   box-shadow: 0 10px 4px rgba(0, 0, 0, 0.137);
   padding: 10px;
 }
+/* Estilos del Toast personalizado */
+.custom-toast {
+  position: fixed;
+  bottom: 10px; /* Ajusta la posición vertical como desees */
+  right: 10px; /* Ajusta la posición horizontal como desees */
+  display: none;
+  color: white; /* Color del texto */
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 9999; /* Asegura que el Toast esté en la parte superior */
+  transition: opacity 0.3s ease-in-out;
+  max-width: 300px; /* Ajusta el ancho máximo como desees */
+}
+
+.custom-toast.show {
+  display: block;
+}
+
+.close-button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+

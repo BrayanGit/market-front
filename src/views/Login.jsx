@@ -17,11 +17,13 @@ export default function RegistroForm() {
 
   const iniciarSesion = async () => {
     const urlServer = "http://localhost:3000";
+    //const endpoint = "/api/usuarios";
     const endpoint = "/login";
     const { email, password } = usuario;
     try {
       if (!email || !password) return alert("Email y password obligatorias");
       const { data: token } = await axios.post(urlServer + endpoint, usuario);
+      //const { data: token } = await axios.post(urlServer + '/api/usuarios/login', usuario);
       alert("Usuario identificado con éxito 😀");
       localStorage.setItem("token", token);
       setUsuario()
@@ -31,7 +33,7 @@ export default function RegistroForm() {
       console.log(message);
     }
   };
-
+  
   return (
     <div className="col-10 col-sm-6 col-md-3 m-auto mt-5">
       <h1><br /><br />Iniciar Sesión</h1>
@@ -58,7 +60,7 @@ export default function RegistroForm() {
           placeholder="Password"
         />
       </div>
-      <Button onClick={iniciarSesion}  variant="outline-primary">
+      <Button onClick={iniciarSesion} variant="outline-primary">
         Iniciar Sesión
       </Button>
     </div>

@@ -1,9 +1,9 @@
-import Button from 'react-bootstrap/Button';
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
 import axios from "axios";
 
-export default function RegistroForm() {
+export default function Registro() {
   const navigate = useNavigate();
   const [usuario, setUsuario] = useState({});
 
@@ -18,7 +18,7 @@ export default function RegistroForm() {
     const endpoint = "/usuarios";
     try {
       await axios.post(urlServer + endpoint, usuario);
-      alert("Usuario registrado con éxito");
+      alert("Usuario registrado con éxito 🎉");
       navigate("/login");
     } catch (error) {
       alert("Algo salió mal ...");
@@ -30,6 +30,17 @@ export default function RegistroForm() {
     <div className="col-10 col-sm-6 col-md-3 m-auto mt-5">
       <h1><br /><br />Registrar nuevo usuario</h1>
       <hr />
+      <div className="form-group form-group-lg mt-1">
+        <label>Nombre</label>
+        <input
+          value={usuario.nombre}
+          onChange={handleSetUsuario}
+          type="text"
+          name="nombre"
+          className="form-control form-control-lg"
+          placeholder="Enter name"
+        />
+      </div>
       <div className="form-group form-group-lg mt-1">
         <label>Email address</label>
         <input
@@ -52,7 +63,7 @@ export default function RegistroForm() {
           placeholder="Password"
         />
       </div>
-      <Button onClick={registrarUsuario}  variant="outline-success">
+      <Button onClick={registrarUsuario} variant="outline-success" value="usuarios">
         Registrarme
       </Button>
     </div>

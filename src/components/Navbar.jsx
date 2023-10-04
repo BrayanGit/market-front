@@ -1,4 +1,5 @@
 import "../assets/css/Navbar.css";
+import Button from 'react-bootstrap/Button';
 import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import Context from "../Context";
@@ -24,26 +25,31 @@ export default function Navbar() {
           </span>
           {!usuario ? (
             <div>
-              <Link to="/tienda">
-                <button className="btn m-1 tienda-btn">Tienda</button>
-              </Link>
-
               <Link to="/registrarse">
-                <button className="btn m-1 register-btn">Registrarse</button> 
+                <Button size="sm" variant="success">Registrarse</Button>{' '} 
               </Link>
-                
+              
               <Link to="/login">
-                <button className="btn login-btn">Iniciar Sesión</button>
+                <Button size="sm" variant="primary">Iniciar Sesion</Button>{' '}
               </Link>
             </div>
           ) : (
             <div>
-              <Link to="/perfil">
-                <button className="btn  m-1 btn-light">Mi Perfil</button>
+              <Link to="/carrito">
+                <Button size="sm" variant="outline-info">Carrito</Button>{' '}
               </Link>
-              <button onClick={logout} className="btn btn-danger">
+                            
+              <Link to="/perfil">
+                <Button size="sm" variant="outline-info">Perfil</Button>{' '}
+              </Link>
+
+              <Link to="/tienda">
+                <Button size="sm" variant="outline-info">Tienda</Button>{' '}
+              </Link>
+              
+              <Button size="sm" variant="danger" onClick={logout}>
                 Salir
-              </button>
+              </Button>{' '}
             </div>
           )}
         </div>

@@ -1,0 +1,20 @@
+
+/* Estilo para el contenedor de toasts centrados */
+.toast-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto; /* Habilita el desplazamiento vertical si es necesario */
+}
+
+/* Estilo para los toasts dentro del ToastContainer */
+.toast {
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo negro traslúcido */
+  width: 100%;
+  max-width: 400px; /* Ajusta el ancho máximo de los toasts según tus preferencias */
+  margin: 1rem; /* Espaciado entre toasts */
+}
+
+
+
+

@@ -1,10 +1,14 @@
 import "../assets/css/Tienda.css";
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Card, Button, Pagination } from "react-bootstrap";
+import { Container, Row, Col, Card, Button, Pagination, Toast } from "react-bootstrap";
+import { useCarrito } from "../CarritoContext";
 
 export default function Tienda() {
   const [productos, setProductos] = useState([]);
+  const { agregarAlCarrito } = useCarrito(); // Obtener la función para agregar al carrito
   const [currentPage, setCurrentPage] = useState(1);
+  const [showToast, setShowToast] = useState(false); // Estado para mostrar/ocultar el Toast
+  const [toastMessage, setToastMessage] = useState(""); // Mensaje del Toast
   const productsPerPage = 6; // Número de productos por página
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
@@ -14,7 +18,7 @@ export default function Tienda() {
 
   useEffect(() => {
     // Realiza la consulta a la API o al archivo data.js
-    import("/public/data.js")
+    import("/public/data.js") 
       .then((module) => {
         setProductos(module.products);
       })
@@ -22,6 +26,16 @@ export default function Tienda() {
         console.error("Error al cargar los productos:", error);
       });
   }, []);
+
+  const handleAgregarAlCarrito = (producto) => {
+    agregarAlCarrito(producto);
+    setToastMessage(`¡${producto.nombre} se ha agregado al carrito!`);
+    setShowToast(true);
+    // Ocultar el Toast después de 3 segundos
+    setTimeout(() => {
+      setShowToast(false);
+    }, 3000);
+  };
 
   return (
     <Container className="mt-2 pt-2">
@@ -40,9 +54,10 @@ export default function Tienda() {
                   <p>Descripción: {producto.descripcion}</p>
                   <p>Neto: {producto.neto}</p>
                   <p>Precio: {producto.precio}</p>
-                  <p>Stock: {producto.stock}</p>
                 </Card.Text>
-                <Button variant="primary">Agregar al carrito</Button>
+                <Button size="sm" variant="outline-primary" onClick={() => handleAgregarAlCarrito(producto)}>
+                  Agregar a carrito
+                </Button> 
               </Card.Body>
             </Card>
           </Col>
@@ -62,6 +77,18 @@ export default function Tienda() {
           ))}
         </Pagination>
       </div>
+       {/* Toast personalizado con estilos */}
+       <div
+        className={`custom-toast ${showToast ? "show" : ""}`}
+        style={{
+          backgroundColor: "rgba(0, 0, 0, 0.7)", // Fondo oscuro translúcido
+        }}
+      >
+        {toastMessage}
+        <button className="close-button" onClick={() => setShowToast(false)}>
+          X
+        </button>
+      </div>             
     </Container>
   );
 };
