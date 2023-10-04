@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import axios from "axios";
 
+
 export default function Registro() {
   const navigate = useNavigate();
   const [usuario, setUsuario] = useState({});
@@ -14,7 +15,8 @@ export default function Registro() {
   };
 
   const registrarUsuario = async () => {
-    const urlServer = "http://localhost:3000";
+    const urlServer = import.meta.env.VITE_REACT_APP_PORT;
+    
     const endpoint = "/usuarios";
     try {
       await axios.post(urlServer + endpoint, usuario);
