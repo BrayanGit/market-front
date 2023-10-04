@@ -8,12 +8,11 @@ import Tienda from "./views/Tienda"
 import Registro from "./views/Registro"
 import Login from "./views/Login"
 import Perfil from "./views/Perfil"
-//import Favoritos from "./views/Favoritos";
 import Carrito from "./components/Carrito";
 
 function App() {
   const [usuario, setUsuario] = useState(null);
- 
+  
   return (
     <div className="App">
       
