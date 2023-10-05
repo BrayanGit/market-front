@@ -15,8 +15,8 @@ export default function Registro() {
 
   const registrarUsuario = async () => {
     //const urlServer = "http://localhost:3000";
-    const urlServer = import.meta.env.VITE_REACT_APP_APIURL;
     //const urlServer = process.env.REACT_APP_API_URL;
+    const urlServer = import.meta.env.VITE_REACT_APP_APIURL;
     const endpoint = "/usuarios";
     try {
       await axios.post(urlServer + endpoint, usuario);
