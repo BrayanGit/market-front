@@ -8,8 +8,8 @@ export default function PerfilUsuario() {
   const [usuario, setUsuarioLocal] = useState({});
 
   const getUsuarioData = async () => {
-    const urlServer = "http://localhost:3000";
-    //const apiUrl = process.env.VITE_REACT_APP_APIURL;
+    //const urlServer = "http://localhost:3000";
+    const urlServer = process.env.VITE_REACT_APP_APIURL;
     //const urlServer = import.meta.env.VITE_REACT_APP_APIURL;
     const endpoint = "/usuarios";
     const token = localStorage.getItem("token");

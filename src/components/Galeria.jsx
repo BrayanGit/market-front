@@ -29,8 +29,8 @@ export default function Galeria() {
   };
 
   const enviarPost = async () => {
-    const urlServer = "http://localhost:3000";
-    //const apiUrl = process.env.VITE_REACT_APP_APIURL;
+    //const urlServer = "http://localhost:3000";
+    const urlServer = process.env.VITE_REACT_APP_APIURL;
     const endpoint = "/posteos";
     try {
       const response = await axios.post(urlServer + endpoint, posteo);
