@@ -28,6 +28,7 @@ export default function Carrito() {
 
   const carritoExito = async () => {
     const urlServer = "http://localhost:3000";
+    //const apiUrl = process.env.VITE_REACT_APP_APIURL;
     const endpoint = "/carrito";
 
     const productosCarrito = carrito.map(producto => ({

@@ -17,7 +17,8 @@ export default function RegistroForm() {
 
   const iniciarSesion = async () => {
     const urlServer = "http://localhost:3000";
-    //const endpoint = "/api/usuarios";
+    //const apiUrl = process.env.VITE_REACT_APP_APIURL;
+    //const urlServer = import.meta.env.VITE_REACT_APP_APIURL;
     const endpoint = "/login";
     const { email, password } = usuario;
     try {
